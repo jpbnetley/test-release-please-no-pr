@@ -1,5 +1,5 @@
 {
-  "release-type": "generic",
+  "release-type": "simple",
   "include-v-in-tag": true,
   "draft": false
 }
