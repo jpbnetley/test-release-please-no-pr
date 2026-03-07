@@ -10,6 +10,9 @@ outputs:
   pr-number:
     description: 'Release PR number'
     value: ${{ steps.set-pr.outputs.pr-number }}
+  pr-created:
+    description: 'Whether a release PR was created'
+    value: ${{ steps.release-please.outputs.prs_created }}
 
 runs:
   using: "composite"
@@ -24,4 +27,9 @@ runs:
     - name: Set PR output
       id: set-pr
       run: echo "pr-number=${{ fromJson(steps.release-please.outputs.pr).number }}" >> "$GITHUB_OUTPUT"
+      shell: bash
+
+    - name: Set PR created output
+      id: set-pr-created
+      run: echo "prs_created=${{ steps.release-please.outputs.prs_created }}" >> "$GITHUB_OUTPUT"
       shell: bash
