@@ -23,5 +23,5 @@ runs:
         
     - name: Set PR output
       id: set-pr
-      run: echo "::set-output name=pr::${{ steps.release-please.outputs.pr }}"
+      run: echo "pr=${{ steps.release-please.outputs.pr }}" >> "$GITHUB_OUTPUT"
       shell: bash
