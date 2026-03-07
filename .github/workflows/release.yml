@@ -18,6 +18,8 @@ jobs:
       - name: Release please
         id: release-please
         uses: ./.github/actions/release-please
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Auto-merge release PR
         id: auto-merge
@@ -39,3 +41,5 @@ jobs:
       - name: Release please on pr merge
         if: steps.auto-merge.outputs.auto_merge_success == 'true'
         uses: ./.github/actions/release-please
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
