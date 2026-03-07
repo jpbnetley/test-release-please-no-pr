@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/jpbnetley/test-release-please-no-pr/compare/v1.1.0...v1.1.1) (2026-03-07)
+
+
+### Bug Fixes
+
+* new fix for test ([#22](https://github.com/jpbnetley/test-release-please-no-pr/issues/22)) ([b85b35b](https://github.com/jpbnetley/test-release-please-no-pr/commit/b85b35b725234fb631d1689e49270bd4be57d259))
+
 ## [1.1.0](https://github.com/jpbnetley/test-release-please-no-pr/compare/v1.0.0...v1.1.0) (2026-03-07)
 
 
