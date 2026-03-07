@@ -28,7 +28,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
         run: |
-            gh pr merge ${{ fromJson(steps.release-please.outputs.pr).number }} --auto --squash
+            gh pr merge ${{ steps.release-please.outputs.pr-number }} --auto --squash
             MERGE_STATUS=$? #returns the exit code of the last command executed. In your workflow,
             if [ $MERGE_STATUS -eq 0 ]; then
             echo "Auto-merge succeeded."
