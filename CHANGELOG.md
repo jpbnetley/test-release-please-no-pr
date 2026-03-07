@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.3](https://github.com/jpbnetley/test-release-please-no-pr/compare/v1.1.2...v1.1.3) (2026-03-07)
+
+
+### Bug Fixes
+
+* add GITHUB_TOKEN to composite action ([125f248](https://github.com/jpbnetley/test-release-please-no-pr/commit/125f248d639948d0577560646a4fb93b10b7382b))
+* composite action pr output ([7bae817](https://github.com/jpbnetley/test-release-please-no-pr/commit/7bae8175a3ae15b9d8272a2e0381d33ead5e1655))
+* reusable action for release-please settings ([27f1695](https://github.com/jpbnetley/test-release-please-no-pr/commit/27f16957a5e954c8e5da1ae4716af4155906f7e7))
+* set output ([cc9c7d4](https://github.com/jpbnetley/test-release-please-no-pr/commit/cc9c7d4fb062f9a01b79adb4eb82c1c4e3c746c5))
+* set pr number as output ([037042a](https://github.com/jpbnetley/test-release-please-no-pr/commit/037042ac27bd97d216155fb83afd5144101b8204))
+* structure release-please reusable action ([4414ee7](https://github.com/jpbnetley/test-release-please-no-pr/commit/4414ee7a6a3614405b0e5754b9478d22870aacfc))
+
 ## [1.1.2](https://github.com/jpbnetley/test-release-please-no-pr/compare/v1.1.1...v1.1.2) (2026-03-07)
 
 
