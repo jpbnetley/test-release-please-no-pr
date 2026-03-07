@@ -21,9 +21,25 @@ jobs:
           release-type: simple
 
       - name: Auto-merge release PR
+        id: auto-merge
         if: steps.release-please.outputs.prs_created == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
-        run: gh pr merge ${{ fromJson(steps.release-please.outputs.pr).number }} --auto --squash
-          
+        run: |
+            gh pr merge ${{ fromJson(steps.release-please.outputs.pr).number }} --auto --squash
+            MERGE_STATUS=$? #returns the exit code of the last command executed. In your workflow,
+            if [ $MERGE_STATUS -eq 0 ]; then
+            echo "Auto-merge succeeded."
+            echo "auto_merge_success=true" >> $GITHUB_OUTPUT
+            else
+            echo "Auto-merge failed."
+            exit $MERGE_STATUS
+            fi
+
+      - name: Release please on pr merge
+        if: steps.auto-merge.outputs.auto_merge_success == 'true'
+        uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: simple
