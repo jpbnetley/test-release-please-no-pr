@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/jpbnetley/test-release-please-no-pr/compare/v1.1.1...v1.1.2) (2026-03-07)
+
+
+### Bug Fixes
+
+* after automerge run release-please again to tag release and tags ([#26](https://github.com/jpbnetley/test-release-please-no-pr/issues/26)) ([968bd5d](https://github.com/jpbnetley/test-release-please-no-pr/commit/968bd5df3605c2f39859b033c81ce629b6692ab4))
+
 ## [1.1.1](https://github.com/jpbnetley/test-release-please-no-pr/compare/v1.1.0...v1.1.1) (2026-03-07)
 
 
