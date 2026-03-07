@@ -10,9 +10,9 @@ outputs:
   pr-number:
     description: 'Release PR number'
     value: ${{ steps.set-pr.outputs.pr-number }}
-  pr-created:
+  prs_created:
     description: 'Whether a release PR was created'
-    value: ${{ steps.release-please.outputs.prs_created }}
+    value: ${{ steps.set-pr-created.outputs.prs_created }}
 
 runs:
   using: "composite"
