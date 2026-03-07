@@ -26,7 +26,14 @@ runs:
         
     - name: Set PR output
       id: set-pr
-      run: echo "pr-number=${{ fromJson(steps.release-please.outputs.pr).number }}" >> "$GITHUB_OUTPUT"
+      run: |
+        PR_OUTPUT="${{ steps.release-please.outputs.pr }}"
+        if echo "$PR_OUTPUT" | jq -e .number >/dev/null 2>&1; then
+          PR_NUMBER=$(echo "$PR_OUTPUT" | jq -r .number)
+        else
+          PR_NUMBER=""
+        fi
+        echo "pr-number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
       shell: bash
 
     - name: Set PR created output
