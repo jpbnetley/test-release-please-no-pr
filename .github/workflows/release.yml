@@ -13,6 +13,8 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v6
+
       - name: Release please
         id: release-please
         uses: ./.github/actions/release-please
