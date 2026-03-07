@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.4](https://github.com/jpbnetley/test-release-please-no-pr/compare/v1.1.3...v1.1.4) (2026-03-07)
+
+
+### Bug Fixes
+
+* handle json if empty ([3771078](https://github.com/jpbnetley/test-release-please-no-pr/commit/3771078b2d04d11e535a3048d89f95a3f9f0584a))
+* handle json if empty ([#44](https://github.com/jpbnetley/test-release-please-no-pr/issues/44)) ([406e8f3](https://github.com/jpbnetley/test-release-please-no-pr/commit/406e8f3a2d224e4adce3958181c7bb7ecb2bdf14))
+
 ## [1.1.3](https://github.com/jpbnetley/test-release-please-no-pr/compare/v1.1.2...v1.1.3) (2026-03-07)
 
 
