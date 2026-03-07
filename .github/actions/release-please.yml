@@ -1,0 +1,11 @@
+using: composite
+outputs:
+  pr: ${{ steps.release-please.outputs.pr }}
+
+steps:
+  - name: Release please
+    id: release-please
+    uses: googleapis/release-please-action@v4
+    with:
+      token: ${{ secrets.GITHUB_TOKEN }}
+      release-type: simple
