@@ -27,9 +27,8 @@ runs:
     - name: Set PR output
       id: set-pr
       run: |
-        PR_OUTPUT="${{ steps.release-please.outputs.pr }}"
-        if echo "$PR_OUTPUT" | jq -e .number >/dev/null 2>&1; then
-          PR_NUMBER=$(echo "$PR_OUTPUT" | jq -r .number)
+        if echo '${{ steps.release-please.outputs.pr }}' | jq -e .number >/dev/null 2>&1; then
+          PR_NUMBER=$(echo '${{ steps.release-please.outputs.pr }}' | jq -r .number)
         else
           PR_NUMBER=""
         fi
