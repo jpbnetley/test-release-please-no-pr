@@ -1,11 +1,27 @@
-using: composite
-outputs:
-  pr: ${{ steps.release-please.outputs.pr }}
+name: Release please
+description: 'A GitHub Action for automating releases using release-please'
 
-steps:
-  - name: Release please
-    id: release-please
-    uses: googleapis/release-please-action@v4
-    with:
-      token: ${{ secrets.GITHUB_TOKEN }}
-      release-type: simple
+inputs:
+  GITHUB_TOKEN:
+    description: 'GitHub token for authentication'
+    required: true
+
+outputs:
+  pr:
+    description: 'Release PR number'
+    value: ${{ steps.set-pr.outputs.pr }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Release please
+      id: release-please
+      uses: googleapis/release-please-action@v4
+      with:
+        token: ${{ inputs.GITHUB_TOKEN }}
+        release-type: simple
+        
+    - name: Set PR output
+      id: set-pr
+      run: echo "::set-output name=pr::${{ steps.release-please.outputs.pr }}"
+      shell: bash
