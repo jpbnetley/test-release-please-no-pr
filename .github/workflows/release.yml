@@ -31,11 +31,11 @@ jobs:
             gh pr merge ${{ steps.release-please.outputs.pr-number }} --auto --squash
             MERGE_STATUS=$? #returns the exit code of the last command executed. In your workflow,
             if [ $MERGE_STATUS -eq 0 ]; then
-            echo "Auto-merge succeeded."
-            echo "auto_merge_success=true" >> $GITHUB_OUTPUT
+              echo "Auto-merge succeeded."
+              echo "auto_merge_success=true" >> $GITHUB_OUTPUT
             else
-            echo "Auto-merge failed."
-            exit $MERGE_STATUS
+              echo "Auto-merge failed."
+              exit $MERGE_STATUS
             fi
 
       - name: Release please on pr merge
