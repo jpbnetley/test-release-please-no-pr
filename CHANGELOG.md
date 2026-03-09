@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.5](https://github.com/jpbnetley/test-release-please-no-pr/compare/v1.1.4...v1.1.5) (2026-03-09)
+
+
+### Bug Fixes
+
+* commit 3 ([86c0446](https://github.com/jpbnetley/test-release-please-no-pr/commit/86c04462ad5b633f30cb60623efcba3149de3534))
+* commit 4 ([86c0446](https://github.com/jpbnetley/test-release-please-no-pr/commit/86c04462ad5b633f30cb60623efcba3149de3534))
+* title commit ([86c0446](https://github.com/jpbnetley/test-release-please-no-pr/commit/86c04462ad5b633f30cb60623efcba3149de3534))
+
 ## [1.1.4](https://github.com/jpbnetley/test-release-please-no-pr/compare/v1.1.3...v1.1.4) (2026-03-07)
 
 
